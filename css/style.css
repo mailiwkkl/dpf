@@ -1,0 +1,1495 @@
+﻿/* Variables de colores */
+:root {
+    --primary-color: #6a1b9a;
+    --primary-light: #9c4dcc;
+    --primary-dark: #38006b;
+    --secondary-color: #e1bee7;
+    --accent-color: #ea80fc;
+    --text-color: #333;
+    --text-light: #666;
+    --background-color: #f5f5f5;
+    --surface-color: #ffffff;
+    --error-color: #d32f2f;
+    --success-color: #388e3c;
+    --warning-color: #f57c00;
+}
+
+/* Reset y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Header */
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav a:hover {
+    opacity: 0.8;
+}
+
+/* Main content */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.container {
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(106, 27, 154, 0.2);
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+    background-color: #78909c;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #546e7a;
+}
+
+.btn-danger {
+    background-color: var(--error-color);
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c62828;
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: white;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+}
+
+/* Mensajes */
+.error-message {
+    background-color: #ffebee;
+    color: var(--error-color);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--error-color);
+}
+
+.success-message {
+    background-color: #e8f5e9;
+    color: var(--success-color);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--success-color);
+}
+
+/* Galería */
+.gallery-section {
+    margin-bottom: 3rem;
+}
+
+.image-carousel {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scrollbar-width: thin;
+}
+
+.image-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.image-carousel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.image-carousel::-webkit-scrollbar-thumb {
+    background: var(--primary-light);
+    border-radius: 4px;
+}
+
+.image-item {
+    position: relative;
+    min-width: 250px;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.image-item:hover {
+    transform: translateY(-4px);
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-overlay h3 {
+    color: white;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.favorite-form {
+    margin: 0;
+}
+
+.favorite-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.favorite-btn.favorited {
+    color: #ff5252;
+}
+
+.favorite-btn:hover {
+    color: var(--accent-color);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: auto;
+}
+
+.modal-content {
+    position: relative;
+    margin: 2% auto;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.close:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-footer {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--surface-color);
+}
+
+.modal-footer h3 {
+    margin: 0;
+}
+
+.favorite-btn-modal {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-light);
+}
+
+.favorite-btn-modal.favorited {
+    color: #ff5252;
+}
+
+.favorite-btn-modal:hover {
+    color: var(--primary-color);
+}
+
+/* Favoritos */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.favorite-item {
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.favorite-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.favorite-info {
+    padding: 1rem;
+}
+
+.favorite-info h3 {
+    margin: 0 0 0.5rem 0;
+}
+
+.favorite-info p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+.whatsapp-section {
+    background-color: #e8f5e9;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Estados vacíos */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-light);
+}
+
+.empty-state p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* Login y Register */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-dark) 100%);
+    padding: 1rem;
+}
+
+.login-form {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-form p {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.login-form a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+/* Tablas */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-table th {
+    background-color: var(--primary-light);
+    color: white;
+    font-weight: 500;
+}
+
+.admin-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Estados */
+.status-pendiente-de-pago {
+    color: var(--error-color);
+    font-weight: 500;
+}
+
+.status-pagado-en-espera {
+    color: var(--warning-color);
+    font-weight: 500;
+}
+
+.status-pagado-en-proceso {
+    color: #1976d2;
+    font-weight: 500;
+}
+
+.status-terminado {
+    color: var(--success-color);
+    font-weight: 500;
+}
+
+.status-entregado {
+    color: #388e3c;
+    font-weight: 500;
+}
+
+/* Estadísticas */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.summary-card {
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.summary-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+/* Progress bar */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    transition: width 0.3s;
+}
+
+/* Notificaciones */
+.notifications-list {
+    margin-top: 2rem;
+}
+
+.notification-item {
+    background-color: var(--surface-color);
+    border-left: 4px solid var(--primary-color);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.notification-item.unread {
+    border-left-color: var(--accent-color);
+    background-color: #f3e5f5;
+}
+
+.notification-content p {
+    margin-bottom: 0.5rem;
+}
+
+.notification-content small {
+    color: var(--text-light);
+}
+
+.notification-actions {
+    margin-top: 1rem;
+}
+
+/* Detalles de pedido */
+.detail-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.detail-row .form-group {
+    flex: 1;
+    min-width: 150px;
+    margin-bottom: 0;
+}
+
+/* Información de perfil */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+    }
+    
+    .detail-row .form-group {
+        min-width: 100%;
+    }
+    
+    .admin-table {
+        font-size: 0.9rem;
+    }
+    
+    .admin-table th,
+    .admin-table td {
+        padding: 0.5rem;
+    }
+    
+    .stats-grid,
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-item {
+        min-width: 200px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .image-item {
+        min-width: 150px;
+        height: 250px;
+    }
+    
+    .modal-content {
+        margin: 5% auto;
+        max-width: 95%;
+    }
+}
+
+/* Estilos para la sección de favoritos por usuarios */
+.favorites-by-users {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.filter-form {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-form .form-group {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 0;
+}
+
+/* Estilos para botones de acción */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+/* Estilos para formularios en modal */
+.favorite-form-modal {
+    margin: 0;
+}
+
+/* Estilos para la sección de WhatsApp */
+.whatsapp-section {
+    background-color: #e8f5e9;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-whatsapp {
+    background-color: #25d366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+    color: white;
+}
+
+/* Estilos para estados de pedidos */
+.status-pendiente-de-pago {
+    color: var(--error-color);
+    font-weight: 500;
+}
+
+.status-pagado-en-espera {
+    color: var(--warning-color);
+    font-weight: 500;
+}
+
+.status-pagado-en-proceso {
+    color: #1976d2;
+    font-weight: 500;
+}
+
+.status-terminado {
+    color: var(--success-color);
+    font-weight: 500;
+}
+
+.status-entregado {
+    color: #388e3c;
+    font-weight: 500;
+}
+
+/* Estilos para tablas de pedidos */
+.order-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.order-items th,
+.order-items td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-items th {
+    background-color: var(--primary-light);
+    color: white;
+    font-weight: 500;
+}
+
+.order-info {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.order-info p {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para notificaciones */
+.notification-item.unread {
+    border-left-color: var(--accent-color);
+    background-color: #f3e5f5;
+}
+
+.notification-actions {
+    margin-top: 1rem;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+/* Mejoras responsive */
+@media (max-width: 768px) {
+    .filter-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-form .form-group {
+        min-width: 100%;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .order-items {
+        font-size: 0.9rem;
+    }
+    
+    .order-items th,
+    .order-items td {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .favorites-by-users {
+        padding: 1rem;
+    }
+    
+    .whatsapp-section {
+        padding: 1rem;
+    }
+}
+
+/* Añadir estos estilos al archivo CSS existente */
+
+/* Estilos para el selector de cliente en invoices */
+.client-selection-container {
+    margin-bottom: 1.5rem;
+}
+
+.client-option {
+    margin-bottom: 1rem;
+}
+
+.client-option label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--primary-color);
+}
+
+/* Estilos para imágenes de favoritos en dashboard */
+.favorite-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favorite-image {
+    max-width: 80px;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid var(--primary-light);
+}
+
+.favorite-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.image-title {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--text-light);
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Modal para imágenes */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    overflow: auto;
+}
+
+.modal-content {
+    position: relative;
+    margin: 2% auto;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.close:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+/* Mejoras responsive */
+@media (max-width: 768px) {
+    .favorite-image {
+        max-width: 60px;
+    }
+    
+    .image-title {
+        max-width: 80px;
+        font-size: 0.7rem;
+    }
+    
+    .modal-content {
+        margin: 5% auto;
+        max-width: 95%;
+    }
+}
+
+/* Header styles */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    flex: 0 0 auto;
+}
+
+.logo img {
+    max-height: 50px;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.header-title {
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 1rem;
+}
+
+.header-title h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.nav {
+    flex: 0 0 auto;
+}
+
+/* Notification styles */
+.notification-link {
+    position: relative;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff4757;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.notification-alert {
+    background-color: #e3f2fd;
+    border-left: 4px solid #2196f3;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+.notification-alert p {
+    margin: 0;
+    color: #1976d2;
+    font-weight: 500;
+}
+
+.notification-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.notification-item.unread {
+    background-color: #f0f8ff;
+    border-left: 4px solid #2196f3;
+}
+
+.notification-item.read {
+    background-color: var(--surface-color);
+    border-left: 4px solid #e0e0e0;
+}
+
+.notification-icon {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.new-indicator {
+    color: #2196f3;
+}
+
+.read-indicator {
+    color: #9e9e9e;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-content p {
+    margin: 0 0 0.5rem 0;
+}
+
+.notification-content small {
+    color: var(--text-light);
+}
+
+/* Order search styles */
+.search-order {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.search-order h2 {
+    margin-top: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-title {
+        margin: 1rem 0;
+        order: 3;
+        width: 100%;
+    }
+    
+    .logo {
+        order: 1;
+    }
+    
+    .nav {
+        order: 2;
+        margin: 1rem 0;
+    }
+    
+    .header-title h2 {
+             font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .notification-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .notification-icon {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .header-title h2 {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Botón de eliminar imagen para admin */
+.delete-image-form {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.btn-delete-image {
+    background-color: rgba(255, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.btn-delete-image:hover {
+    background-color: rgba(255, 0, 0, 0.9);
+}
+
+/* Estilos para formulario de clientes no registrados */
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Mejoras para el formulario de pedidos */
+#invoiceForm .form-group {
+    margin-bottom: 1rem;
+}
+
+#invoiceForm label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+#invoiceForm input, #invoiceForm select, #invoiceForm textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.detail-row .form-group {
+    flex: 1;
+    min-width: 120px;
+    margin-bottom: 0;
+}
+
+.detail-row .form-group label {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.remove-detail {
+    padding: 0.5rem;
+    height: fit-content;
+}
+
+/* Estilos para estado de clientes en tabla */
+.admin-table td {
+    vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .btn-delete-image {
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+    }
+    
+    .detail-row .form-group {
+        min-width: 100%;
+    }
+    
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-row .form-group {
+        min-width: 100%;
+    }
+}
+
+/* Añadir estos estilos al archivo CSS existente */
+
+/* Botón de eliminar imagen para admin */
+.delete-image-form {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+    margin: 0;
+}
+
+.btn-delete-image {
+    background-color: rgba(255, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.btn-delete-image:hover {
+    background-color: rgba(255, 0, 0, 0.9);
+    transform: scale(1.1);
+}
+
+/* Asegurar que el botón de eliminar esté por encima de la imagen */
+.image-item {
+    position: relative;
+}
+
+.image-item img {
+    z-index: 1;
+}
+
+/* Mejorar el formulario de favoritos */
+.favorite-form {
+    margin: 0;
+    z-index: 10;
+}
+
+/* Efecto hover para items de imagen */
+.image-item:hover .btn-delete-image {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .btn-delete-image {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+}
+
+/* Ajustar el overlay de la imagen para que no tape el botón */
+.image-overlay {
+    z-index: 5;
+}
+
+/* Estilos para mensajes de confirmación */
+.confirm-delete {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    text-align: center;
+}
+
+.confirm-delete-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+/* Estilos para confirmación de cliente */
+.confirmation-box {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 2rem 0;
+}
+
+.client-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.existing-client, .new-client {
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 2px solid #e0e0e0;
+}
+
+.existing-client {
+    border-color: #4caf50;
+}
+
+.new-client {
+    border-color: #2196f3;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.radio-options label {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.radio-options label:hover {
+    background-color: #f9f9f9;
+}
+
+.radio-options input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+
+
+
+
+/* Agrega estos estilos en style.css */
+.theme-image-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #6f42c1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.theme-image-icon:hover {
+    transform: scale(1.1);
+}
+
+.theme-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.theme-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Para la página de administración de temáticas */
+.admin-theme-list img.theme-image-icon {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .client-comparison {
+        grid-template-columns: 1fr;
+    }
+}
